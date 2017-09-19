@@ -1,0 +1,302 @@
+body
+{
+	background-position: top;
+	background-size: 100% 800px;
+	background-repeat: no-repeat;
+    margin: 0;
+}
+.div1
+{
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0,0,0,0.5);
+font-size: 15px;
+font-family: "Comic Sans MS";
+font-style: bold;
+
+color: #ffffff;
+
+}
+.div1 a
+{
+	position: relative;
+	margin:10px;
+	color: #ffffff;
+    text-decoration: none;
+    top: 14px;
+
+}
+.div1 a:hover
+{
+color: #000;
+}
+
+.div2
+{
+position: absolute;
+width: 980px;
+left: 50%;
+top: 300px;
+margin-left: -490px;
+text-align: center;
+}
+.div2 .Input1
+{
+font-size: 15px;
+font-family: "Comic Sans MS";
+font-style: bold;
+width: 500px;
+height: 40px;
+border-width: 1px;
+border-radius: 15px;
+border-style: solid;
+border-color: rgb(180,180,180);
+background-color: rgb(255,255,255);
+padding-left: 5px;
+
+
+}
+.div2 .Input1:hover
+{
+width: 500px;
+height: 40px;
+border-width: 1px;
+border-radius: 3px;
+border-style: solid;
+border-color: rgb(150,150,150);
+background-color: rgb(255,255,255);
+padding-left: 5px;
+}
+.div2 .Input1:focus
+{
+width: 500px;
+height: 40px;
+border-width: 1px;
+border-radius: 3px;
+border-style: solid;
+border-color: rgb(150,150,150);
+background-color: rgb(255,255,255); 
+padding-left: 5px; 
+}
+.div2 .Button1
+{
+text-decoration: none;
+  width: 48px;
+  height: 48px;
+ border:none;
+background: url(ss1.png);
+}
+.div2 .Button1:hover
+{
+	cursor: pointer;
+   border:none;
+  background: url(ss.png);
+ 
+}
+.Image1
+{
+	position: absolute;
+	width: 980px;
+	left: 50%;
+	top: 150px;
+	margin-left: -490px; 
+   text-align: center;
+}
+.div5
+    {
+    	width:980px;
+    	margin: 5px;
+		font-size: 13px;
+		font-family: "宋体";
+		font-style: normal;
+		font-weight: normal;
+        color:rgb(150,150,150);
+        position: absolute;
+        top: 700px;
+        left: 50%;
+        margin-left:-490px; 
+        text-align: center;
+
+
+    }
+    .div5 a
+    {
+    	margin: 5px;
+    	color: rgb(150,150,150);
+
+    }
+    .div5 a:hover
+    {
+        margin: 5px;
+    	color: rgb(150,150,150);	
+    }
+    .div6
+    {
+        width: 980px;
+    	margin: 10px;
+		font-size: 13px;
+		font-family: "宋体";
+		font-style: normal;
+		font-weight: normal;
+        color:rgb(150,150,150);
+        position: absolute;
+        top: 705px;
+        left: 50%;
+        margin-left: -490px;
+        text-align: center;
+    }
+    .div6 a
+    {
+    	color: rgb(150,150,150);
+
+    }
+    .div6 a:hover
+    {
+
+    	color: rgb(150,150,150);	
+    }
+    .div3
+    {
+    	position: absolute;
+    	margin:10px;
+    	top: 50px;
+    	right: 20px;
+
+    }
+    .div3 input
+    {
+    	margin:10px;
+    }
+    .div3 .TuPian
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(tp.png);
+
+    }
+     .div3 .TuPian:hover
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(tp1.png);
+
+    }
+        .div3 .NuoMi
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(nm.png);
+
+    }
+     .div3 .NuoMi:hover
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(nm1.png);
+
+    }
+        .div3 .YinYue
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(yy.png);
+
+    }
+     .div3 .YinYue:hover
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(yy1.png);
+
+    }
+        .div3 .ZhiDao
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(zd.png);
+
+    }
+     .div3 .ZhiDao:hover
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(zd1.png);
+
+    }
+        .div3 .WenKu
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(wk.png);
+
+    }
+     .div3 .WenKu:hover
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(wk1.png);
+
+    }
+        .div3 .FengYunBang
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(fyb.png);
+
+    }
+     .div3 .FengYunBang:hover
+    {
+    	width: 32px;
+    	height: 32px;
+    	border:none;
+    	background:url(fyb1.png);
+
+    }
+.div4
+{
+	position: absolute;
+	right: 30px;
+	top: 690px;
+
+}
+.div4 input
+{
+	margin:10px;
+}
+.div4 .Left
+{
+width: 48px;
+height: 48px;
+border:none;
+background: url(left.png);
+}
+.div4 .Left:hover
+{
+	border:none;
+	background:url(left1.png);
+
+}
+.div4 .Right
+{
+	border:none;
+width: 48px;
+height: 48px;
+background: url(right.png);
+}
+.div4 .Right:hover
+{
+	border:none;
+	background:url(right1.png);
+
+}

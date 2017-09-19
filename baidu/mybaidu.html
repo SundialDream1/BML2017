@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mybaidu</title>
+	<link rel="stylesheet" type="text/css" href="my.css">
+</head>
+<body id="Body" background="u=2936724535,2204643629&fm=214&gp=0.jpg">
+<div class="div1">
+<a class="a1" href="http://news.baidu.com/" >新闻</a>
+<a class="a2" href="https://www.hao123.com/">hao123</a>
+<a  class="a3" href="http://map.baidu.com/">地图</a>
+<a class="a4" href="http://v.baidu.com/">视频</a>
+<a class="a5" href="https://tieba.baidu.com/index.html">贴吧</a>
+<a class="a6" href="http://xueshu.baidu.com/">学术</a>
+<a class="a7" href="#">登入</a>
+<a class="a8" href="#">设置</a>
+<a class="a9" href="https://www.baidu.com/more/">更多产品</a>
+</div>
+<div class="div2">
+	<input class="Input1" type="text" name="search" title="请输入关键词">
+<input class="Button1" type="submit" name="value" title="百度一下" onclick="OnClick()" value=" ">
+
+</div>
+<div class="Image1">
+<a href="http://www.bmlab.cn/">
+<img  src="baidu.png" onmouseenter="this.src='baidu1.png'" onmouseleave="this.src='baidu.png'" title="百度">
+</a>
+</div>
+<div class="div3">
+<input class="TuPian" type="button" name="haha" title="图片" onclick="window.location.href='http://image.baidu.com/'"> 	
+<input class="NuoMi" type="button" name="haha" title="糯米" onclick="window.location.href='https://www.nuomi.com/?cid=002540'"> 	
+<input class="YinYue" type="button" name="haha" title="音乐" onclick="window.location.href='http://music.baidu.com/'"> 	
+<input class="ZhiDao" type="button" name="haha" title="知道" onclick="window.location.href='https://zhidao.baidu.com/'"> 
+<input class="WenKu" type="button" name="haha" title="文库" onclick="window.location.href='https://wenku.baidu.com/'"> 	
+<input class="FengYunBang" type="button" name="haha" title="风云榜" onclick="window.location.href='http://top.baidu.com/'"> 	
+</div>
+<div class="div5">
+	<a href="https://www.baidu.com/cache/sethelp/help.html">把百度设为主页</a>
+	<a href="http://home.baidu.com/">关于百度</a>
+	<a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-irhome">About Baidu</a>
+	<a href="http://e.baidu.com/?refer=888">百度推广</a>
+</div>
+
+<div class="div6">
+	<p>&copy;2017 Baidu <a href="https://www.baidu.com/duty/">使用前必读</a>&nbsp;<a href="http://help.baidu.com/">意见反馈</a>&nbsp;京ICP证030173号&reg;&nbsp;
+<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001">
+	京公网安备11000002000001号&reg;
+	</a>
+	</p>
+</div>
+<div class="div4">
+	<input class="Left" type="button" name="left" onclick="Pre()" title="上一张图片">
+	<input class="Right" type="button" name="right" onclick="Next()" title="下一张图片">
+</div>
+<script type="text/javascript">
+var a=new Array();
+a[0]="u=2936724535,2204643629&fm=214&gp=0.jpg";
+a[1]="576fe79b742aa75c809cb3f5.jpg";
+a[2]="688506.jpg";
+a[3]="57ceb7e49fd71a491d51c7d1.jpg";
+a[4]="151327vho1hxr1op1lh6mz.jpg";
+    var i=0;
+	function OnClick()
+	{
+          window.location.href="http://www.bmlab.cn";
+	}
+	function Next()
+	{
+		i++;
+		if(i>4)
+		{
+			i=0;
+		}
+		document.getElementById("Body").background=a[i];
+	
+
+	}
+	function Pre()
+	{
+		i--;
+		if(i<0)
+		{
+			i=4;
+		}
+        document.getElementById("Body").background=a[i];
+	
+
+	}
+</script>
+</body>
+</html>
