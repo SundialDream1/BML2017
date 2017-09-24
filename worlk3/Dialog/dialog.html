@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登入框</title>
+	<link rel="stylesheet" type="text/css" href="dialog.css">
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="Dialog"><!--注册块-->
+		<div>
+			<img src="image/user1.png" title="注册">
+		</div>
+		<input id="Button" type="button" name="Button" value="注册">
+	</div>
+	<div id="Form"><!--用户注册块-->
+		<div class="Label">
+			用户注册:
+		</div>
+		<div class="Cancel">
+			<input class="CancelButton" id="CancelButton" type="button" name="Button" title="取消">
+		</div>
+		<div>
+			<label for="User" class="User">
+				用户名:
+			</label>
+			<input id="UserName" type="text" name="User">
+		</div>
+		<div>
+			<label for="Password" class="Password">
+				密码:
+			</label>
+			<input id="PasswordText" type="password" name="Password" onchange="OnChange()">
+		</div>
+		<div class="PasswordStrength" id="PasswordStrength">
+
+		</div>
+		<input class="Reset" type="reset" name="Reset" value="重置" onclick="OnClick_1()">
+		<input class="Submit" id="Submit" type="submit" name="Submit" value="注册" onclick="OnClick()">
+	</div>
+	<div id="Show"><!--显示注册成功块-->
+		<div class="Label">
+			注册成功!
+		</div>
+		<div class="Back">
+			<input id="BackButton" type="button" name="Button" title="返回">
+		</div>
+		<p id="ShowUser">
+		</p>
+		<p id="ShowPassword">
+		</p>
+	</div>
+</body>
+<script type="text/javascript">
+	function OnChange()//获取密码强度等级
+	{
+		var sum=new Array();
+		sum[0]=0;
+		sum[1]=0;
+		sum[2]=0;
+		sum[3]=0;
+		var x=document.getElementById("PasswordText").value;
+		for(var i=0;i<x.length;i++)
+		{
+			if(x[i]>='0'&&x[i]<='9')
+			{
+				sum[0]++;
+			}
+			if(x[i]>='a'&&x[i]<='z')
+			{
+				sum[1]++;
+			}
+			if(x[i]>='A'&&x[i]<='Z')
+			{
+				sum[2]++;
+			}
+			if(x[i]==','||x[i]=='*'||x[i]=='!')
+			{
+				sum[3]++;
+			}
+		}
+		var count=0;
+		for(var i=0;i<4;i++)
+		{
+			if(sum[i]!=0)
+			{
+				count++;
+			}
+		}
+		var Strength="弱";
+		if(x.length>=15)
+		{
+			if(count==4)
+			{
+				Strength="极强";
+			}
+			else if(count==3)
+			{
+				Strength="强";
+			}
+			else if(count==2)
+			{
+				Strength="较强";
+			}
+			else if(count==1)
+			{
+				Strength="中等";
+			}
+		}
+		else
+		{
+			if(count==4)
+			{
+				Strength="强";
+			}
+			else if(count==3)
+			{
+				Strength="较强";
+			}
+			else if(count==2)
+			{
+				Strength="中";
+			}
+			else if(count==1)
+			{
+				Strength="弱";
+			}
+		}
+
+		var PasswordStrength=document.getElementById('PasswordStrength');
+		PasswordStrength.innerHTML="密码强度:"+Strength;
+	}
+	$("#Show").hide();//隐藏显示结果块
+	function OnClick_1()
+	{
+		var x=document.getElementById("UserName");
+		var y=document.getElementById("PasswordText");
+		x.value=null;
+		y.value=null;
+
+	}
+	function OnClick()//注册按钮
+	{
+		var UserName=document.getElementById("UserName");
+		var Password=document.getElementById("PasswordText");
+    var R=/^[a-zA-Z0-9/*/_\u4e00-\u9fa5]{1,20}$/;//匹配汉字,英文,数字,以及*号下划线且长度小于20的字符串
+    if(UserName.value)
+    {
+    	if(R.test(UserName.value))
+    	{
+    	var R2=/^[/!/,/*0-9A-Za-z]{1,20}$/;//匹配英文,数字,以及*号!号,号且长度小于20的字符串
+    	if(Password.value)
+    	{
+    		if(R2.test(Password.value))
+    		{
+    			var ShowUser=document.getElementById("ShowUser");
+    			var ShowPassword=document.getElementById("ShowPassword");
+    			ShowUser.innerHTML="用户名为:"+UserName.value;
+    			ShowPassword.innerHTML="密码为:"+Password.value;
+    			$("#Form").hide();
+    			$("#Show").slideToggle('slow');
+
+
+    		}
+    		else
+    		{
+    			alert("输入有误,密码只能输入英文,数字,以及*号!号,号且长度小于20的字符串!");
+    			password.value=null;
+    		}
+    	}
+    	else
+
+    	{
+    		alert("未输入密码!");
+    	}
+    }
+    else
+    {
+    	alert("输入有误,用户名只能输入汉字,英文,数字,以及*号下划线且长度小于20的字符串!");
+    	User.value=null;
+
+    }
+}else {
+	alert("未输入用户名!")
+}
+}
+
+	$(function() {//自动换背景
+		var backgrounds=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg","image/5.jpg","image/6.jpg","image/7.jpg","image/8.jpg"];
+		var i=0;
+		setInterval(function(){
+			i++;
+			if(i>7)
+			{
+				i=0;
+			}
+			$("body").css("background","url("+backgrounds[i]+") no-repeat"
+				)
+		},10000);
+
+		$("#Button").click(function(){//注册和用户注册块的切换
+			$("#Dialog").hide();
+			$("#Form").slideDown('slow');
+		});
+		$("#CancelButton").click(function(){//用户注册和注册块的切换
+			$("#Form").hide();
+			$("#Dialog").slideDown('slow');
+			var User=document.getElementById("UserName");
+			var Password=document.getElementById("PasswordText");
+
+			User.value=null;
+			Password.value=null;
+			var PasswordStrength=document.getElementById('PasswordStrength');
+			PasswordStrength.innerHTML=null;
+
+
+		});
+		$("#BackButton").click(function(){//显示块和用户注册块的切换
+
+			$("#Show").hide();
+			$("#Form").slideDown('slow');
+		})
+	});
+</script>
+</html>

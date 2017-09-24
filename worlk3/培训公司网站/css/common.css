@@ -1,0 +1,198 @@
+*{
+	margin: 0;
+	padding:0;
+
+}
+a{
+	text-decoration: none;
+
+}
+ul
+{
+	list-style: none;
+}
+img
+{
+	border: 0;
+}/*样式重置*/
+.wrap
+{
+	width: 1100px;
+	margin: 0 auto;
+}
+/****header开始****/
+#header
+{
+
+height: 76px;
+
+}
+#header .logo
+{
+	margin-top: 9px;
+	float: left;
+}
+#nav
+{
+   float: right;
+   margin-top: 20px;
+
+}
+#nav li
+{   
+	width: 90px;
+	height: 36px;
+	float: left;
+}
+#nav li a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 36px;
+    color: #434343;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+#nav li a:hover
+{
+	color:#e06666;
+}
+/****header结束****/
+/****banner开始****/
+#banner
+{
+	height: 453px;
+	background: url(../img/banner01.jpg) no-repeat 50% 50%;
+
+}
+/****banner结束****/
+/****news开始****/
+#news
+{
+	height: 152px;
+
+
+}
+#trends
+{
+
+	width: 640px;
+	height: 100px;
+	float: left;
+	margin-top: 20px;
+}
+#trends .trends-title,#notice .notice-title
+{
+	float: left;
+	color: #333;
+	font-size: 16px;
+
+}
+#trends .trends-more,#notice .notice-more
+{
+	float: right;
+	color: #333;
+	font-size: 12px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 20px;
+}
+#trends .trends-more:hover,#notice .notice-more:hover
+{
+	background-color: orange;
+}
+#trends .trends-list
+{
+clear: both;
+}
+#trends .trends-list li
+{
+	width: 295px;
+	height: 30px;
+	float: left;
+	background:url(../img/home-bg1.png) no-repeat;
+    text-indent: 15px;
+} 
+
+.news-item a 
+{
+
+color: #333;
+font-size: 12px;
+
+}
+.news-item a:hover
+{
+
+color: blue;
+font-size: 12px;
+
+}
+#notice
+{
+	    width: 400px;
+		height: 100px;
+		float: right;
+		margin-top: 20px;
+}
+#notice .notice-list
+{
+	width: 382px;
+	border: 1px dotted #333;
+	clear: both;
+
+}
+#notice .notice-list li
+{
+	height: 28px;
+	float: none;
+	text-align: center;
+
+}
+#notice .notice-list li
+{
+	width: 295px;
+	height: 30px;
+	background:url(../img/home-bg1.png) no-repeat;
+
+} 
+/****news结束****/
+/****cource开始****/
+
+#cource{
+
+
+    margin-top: 30px;
+	text-align: center;
+
+}
+#cource .head
+{
+	margin-bottom: 30px;
+}
+#cource .cource-list
+{
+	margin-top: 30px;
+}
+#cource .cource-list li
+{
+	
+	width: 194px;
+	float: left;
+
+}
+#cource .cource-list li a
+{
+	color: #333;
+
+}
+#cource .cource-list li a:hover
+{
+	color: blue;
+}
+/****cource开始****/
